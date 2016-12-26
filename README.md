@@ -9,3 +9,6 @@ solution:  export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 Problem:   OpenCV make fails - “recompile with -fPIC”
 
 Solution:  ./configure --disable-shared -with-pic
+
+Problem:   /lib/libbz2.so.1: could not read symbols: File in wrong format  build Opencv
+Solution:  sed -i 's#/lib/libbz2.so.1#/lib64/libbz2.so.1#g' CMakeCache.txt
