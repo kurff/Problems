@@ -17,3 +17,7 @@ Solution:  sed -i 's#/lib/libbz2.so.1#/lib64/libbz2.so.1#g' CMakeCache.txt
 Problem:  stdc++ can not find
 
 Solution: sudo yum install libstdc++-static
+
+Problem: GLIBC_2.14 not found
+
+Solution: gcc -static
