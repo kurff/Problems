@@ -21,3 +21,7 @@ Solution: sudo yum install libstdc++-static
 Problem: GLIBC_2.14 not found
 
 Solution: gcc -static
+
+
+Problem: undefined reference to `TLS init function for caffe2::CUDAContext::cuda_objects_'
+Solution: update gcc (in my case, update gcc-4.8.2 -> gcc-4.8.3)
