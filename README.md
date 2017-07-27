@@ -25,3 +25,7 @@ Solution: gcc -static
 
 Problem: undefined reference to `TLS init function for caffe2::CUDAContext::cuda_objects_'
 Solution: update gcc (in my case, update gcc-4.8.2 -> gcc-4.8.3)
+
+
+Problem: update gcc on CentOS
+Solution: unset LIBRARY_PATH CPATH C_INCLUDE_PATH PKG_CONFIG_PATH CPLUS_INCLUDE_PATH INCLUDE
