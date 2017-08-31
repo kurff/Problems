@@ -31,3 +31,9 @@ Solution: update gcc (in my case, update gcc-4.8.2 -> gcc-4.8.3)
 Problem: update gcc on CentOS
 
 Solution: unset LIBRARY_PATH CPATH C_INCLUDE_PATH PKG_CONFIG_PATH CPLUS_INCLUDE_PATH INCLUDE
+
+
+Problem: checking for suffix of object files... configure: error: in `/home/manu/gcc/gcc/i686-pc-linux-gnu/libgcc':
+         configure: error: cannot compute suffix of object files: cannot compile
+
+Solution: Required libraries for the GCC build are missing, specifically MPFR, GMP and MPC. If installed as shared libraries they must be in the runtime linker's search path so they can be found. 
