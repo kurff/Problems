@@ -37,3 +37,8 @@ Problem: checking for suffix of object files... configure: error: in `/home/manu
          configure: error: cannot compute suffix of object files: cannot compile
 
 Solution: Required libraries for the GCC build are missing, specifically MPFR, GMP and MPC. If installed as shared libraries they must be in the runtime linker's search path so they can be found. 
+
+
+Problem: loss can not reduce in training neural networks
+
+Solution: initialization is very important
