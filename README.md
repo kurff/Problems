@@ -42,3 +42,9 @@ Solution: Required libraries for the GCC build are missing, specifically MPFR, G
 Problem: loss can not reduce in training neural networks
 
 Solution: initialization is very important
+
+
+Problem: Nginx [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
+
+
+Solution: sudo fuser -k 80/tcp
