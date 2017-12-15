@@ -48,3 +48,7 @@ Problem: Nginx [emerg]: bind() to 0.0.0.0:80 failed (98: Address already in use)
 
 
 Solution: sudo fuser -k 80/tcp
+
+
+Problem: install Fcgi 'EOF' was not declared in this scope
+Solution: 在./include/fcgio.h文件中加上 #include <cstdio>
