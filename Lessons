@@ -1,0 +1,30 @@
+#Lessons learned
+
+Some key findings from the Google Research paper:
+R-FCN and SSD models are faster on average but cannot beat the Faster R-CNN in accuracy if speed is not a concern.
+Faster R-CNN requires at least 100 ms per image.
+
+Use only low-resolution feature maps for detections hurts accuracy badly.
+Input image resolution impacts accuracy significantly. Reduce image size by half in width and height lowers accuracy by 15.88% on average but also reduces inference time by 27.4% on average.
+Choice of feature extractors impacts detection accuracy for Faster R-CNN and R-FCN but less reliant for SSD.
+
+
+Post processing includes non-max suppression (which only run on CPU) takes up the bulk of the running time for the fastest models at about 40 ms which caps speed to 25 FPS.
+If mAP is calculated with one single IoU only, use mAP@IoU=0.75.
+
+With an Inception ResNet network as a feature extractor, the use of stride 8 instead of 16 improves the mAP by a factor of 5%, but increased running time by a factor of 63%.
+
+## Most accurate
+The most accurate single model use Faster R-CNN using Inception ResNet with 300 proposals. It runs at 1 second per image.
+The most accurate model is an ensemble model with multi-crop inference. It achieves state-of-the-art detection on 2016 COCO challenge in accuracy. It uses the vector of average precision to select five most different models.
+
+## Fastest
+SSD with MobileNet provides the best accuracy tradeoff within the fastest detectors.
+
+SSD is fast but performs worse for small objects comparing with others.
+
+For large objects, SSD can outperform Faster R-CNN and R-FCN in accuracy with lighter and faster extractors.
+
+#Good balance between accuracy and speed
+
+Faster R-CNN can match the speed of R-FCN and SSD at 32mAP if we reduce the number of proposal to 50.
