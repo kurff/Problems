@@ -52,3 +52,14 @@ Solution: sudo fuser -k 80/tcp
 
 Problem: install Fcgi 'EOF' was not declared in this scope
 Solution: 在./include/fcgio.h文件中加上 #include <cstdio>
+
+Problem:  building 'pycocotools._mask' extension
+error: unknown file type '.pyx' (from 'pycocotools/_mask.pyx')
+Solution: directly install pycocotools from PYPI
+         
+Problem: Install Detectron: gcc: error: unrecognized command line option '-fstack-protector-strong'
+Solution: /usr/lib64/python2.7/_sysconfigdata.py
+-fstack-protector-strong was merged into GCC version 4.9; 4.8.x does not support it. upgrade GCC or use -fstack-protector-all or -fstack-protector
+
+
+
