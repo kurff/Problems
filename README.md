@@ -61,5 +61,7 @@ Problem: Install Detectron: gcc: error: unrecognized command line option '-fstac
 Solution: /usr/lib64/python2.7/_sysconfigdata.py
 -fstack-protector-strong was merged into GCC version 4.9; 4.8.x does not support it. upgrade GCC or use -fstack-protector-all or -fstack-protector
 
+ImportError: /home/odin/.conda/envs/py36/lib/python3.6/site-packages/matplotlib/../../../libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /home/odin/.conda/envs/py36/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so)
 
+pip uninstalling/reinstalling scipy
 
