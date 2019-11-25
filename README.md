@@ -65,3 +65,5 @@ ImportError: /home/odin/.conda/envs/py36/lib/python3.6/site-packages/matplotlib/
 
 pip uninstalling/reinstalling scipy
 
+git score 
+git config credential.helper store
